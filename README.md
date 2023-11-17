@@ -1,3 +1,4 @@
+![topology](https://i.imgur.com/qy7xIaf.png)
 ---producer.py After initialization from the constructor, when the thread is started, it enters the run method. Here we register the producer (thread), which gets an id. In an infinite loop, for each product in the producer's list, we add to its available_products list the amount of products offered. If its product queue is full, it waits with sleep. Otherwise, it waits after adding each product. If all consumers have called the place_order method, then all producers will be stopped.
 
 ---consumer.py In the run method, its created a new cart. For each add and remove operation in the consumer list, we add/remove the desired quantity from the cart. We wait with sleep while the product we want to add is not available in available_products. We call the place_order method and display each product in the cart.
